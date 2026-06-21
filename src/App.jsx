@@ -4,18 +4,20 @@ import ProductList from './features/deals/ProductList';
 import CartDrawer from './features/cart/CartDrawer';
 import CartResultsScreen from './features/cart/CartResultsScreen';
 import PantryScreen from './features/pantry/PantryScreen';
+import AccountScreen from './features/account/AccountScreen'; // Import the new AccountScreen
 import Button from './components/Button';
 import './App.css';
 
 function App() {
+  // App state management
   const [hasStarted, setHasStarted] = useState(false);
   const [currentTab, setCurrentTab] = useState('deals'); 
-  
   const [cart, setCart] = useState({});
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const handleStartSaving = () => setHasStarted(true);
 
+  // Handle adding, updating, or removing items from the cart
   const updateQuantity = (item, change) => {
     setCart(prevCart => {
       const newCart = { ...prevCart };
@@ -33,10 +35,12 @@ function App() {
 
   const clearCart = () => setCart({});
 
+  // Calculate cart totals
   const cartItemsArray = Object.values(cart);
   const totalItems = cartItemsArray.reduce((sum, item) => sum + item.quantity, 0);
   const totalPrice = cartItemsArray.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
+  // Render the correct screen based on the current tab
   const renderCurrentScreen = () => {
     switch (currentTab) {
       case 'deals':
@@ -53,12 +57,7 @@ function App() {
       case 'pantry': 
         return <PantryScreen cart={cart} onUpdateQuantity={updateQuantity} />;
       case 'account':
-        return (
-          <div style={{ padding: '80px 20px', textAlign: 'center', backgroundColor: '#F8F7F2', minHeight: '100vh' }}>
-            <h2 style={{ fontSize: '28px', fontWeight: '900', color: '#111' }}>Account</h2>
-            <p style={{ color: '#666', fontWeight: 'bold' }}>Settings and profile coming soon.</p>
-          </div>
-        );
+        return <AccountScreen />; // Render the new AccountScreen component here
       default:
         return <ProductList cart={cart} onUpdateQuantity={updateQuantity} />;
     }
@@ -67,22 +66,27 @@ function App() {
   return (
     <div className="app-container" style={{ backgroundColor: '#F8F7F2', minHeight: '100vh', position: 'relative', overflowX: 'hidden' }}>
       {!hasStarted ? (
+        // Welcome Screen
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', padding: '0 25px', boxSizing: 'border-box', textAlign: 'center' }}>
-          {/* 🌟 1. 修改：換成真實的 Prox 意象圖片 (購物袋) */}
+          
+          {/* App Logo Image */}
           <div style={{ marginBottom: '25px', width: '130px', height: '130px', borderRadius: '30px', overflow: 'hidden', border: '4px solid #111', boxShadow: '6px 6px 0px #111' }}>
              <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=400&q=80" alt="prox app" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
-          {/* 🌟 修改：大標題改為 prox */}
+          
+          {/* App Title */}
           <h1 style={{ fontSize: '48px', fontWeight: '900', color: '#111', margin: '0 0 10px 0', letterSpacing: '-2px' }}>prox</h1>
           <p style={{ fontSize: '16px', fontWeight: 'bold', color: '#555', maxWidth: '280px', margin: '0 0 40px 0' }}>Compare grocery prices, discover active deals, and optimize your basket.</p>
           <Button variant="primary" onClick={handleStartSaving} style={{ width: '100%', maxWidth: '300px', padding: '18px', fontSize: '18px' }}>Start Saving Now →</Button>
         </div>
       ) : (
+        // Main App Interface
         <>
           <div style={{ paddingBottom: '110px' }}>
             {renderCurrentScreen()}
           </div>
 
+          {/* Floating Cart Button */}
           {totalItems > 0 && currentTab !== 'cart' && (
             <div 
               onClick={() => setIsDrawerOpen(true)}
@@ -100,6 +104,7 @@ function App() {
             </div>
           )}
 
+          {/* Cart Drawer Component */}
           <CartDrawer 
             isOpen={isDrawerOpen} 
             onClose={() => setIsDrawerOpen(false)} 
@@ -112,6 +117,7 @@ function App() {
             }}
           />
 
+          {/* Bottom Navigation Bar */}
           <div style={{ position: 'fixed', bottom: 0, left: 0, right: 0, backgroundColor: '#FFF', borderTop: '3px solid #111', borderTopLeftRadius: '24px', borderTopRightRadius: '24px', display: 'flex', justifyContent: 'space-around', padding: '12px 10px 22px 10px', zIndex: 990 }}>
             <NavIcon icon="🔥" label="Deals" isActive={currentTab === 'deals'} onClick={() => setCurrentTab('deals')} />
             <NavIcon icon="🛒" label="Cart" isActive={currentTab === 'cart'} onClick={() => setCurrentTab('cart')} />
@@ -124,6 +130,7 @@ function App() {
   );
 }
 
+// Navigation Icon Component
 function NavIcon({ icon, label, isActive, onClick, style }) {
   return (
     <div onClick={onClick} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', cursor: 'pointer', opacity: isActive ? 1 : 0.6, transition: '0.2s', ...style }}>

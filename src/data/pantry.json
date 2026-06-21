@@ -1,0 +1,47 @@
+[
+  {
+    "id": "t1",
+    "name": "Charmin Ultra Soft Toilet Paper",
+    "img": "https://images.unsplash.com/photo-1584556812952-905ffd0c611a?w=300&q=80",
+    "stockStatus": "Low",
+    "daysInPantry": 21,
+    "price": 12.99,
+    "deal": "Target 60% OFF"
+  },
+  {
+    "id": "c1",
+    "name": "Premium Dark Roast Coffee Beans",
+    "img": "https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=300&q=80",
+    "stockStatus": "Low",
+    "daysInPantry": 18,
+    "price": 8.99,
+    "deal": "Walmart Rollback"
+  },
+  {
+    "id": "e1",
+    "name": "Large Brown Eggs",
+    "img": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=300&q=80",
+    "stockStatus": "Good",
+    "daysInPantry": 3,
+    "price": 2.99,
+    "deal": null
+  },
+  {
+    "id": "m1",
+    "name": "Whole Milk (Gallon)",
+    "img": "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=300&q=80",
+    "stockStatus": "Good",
+    "daysInPantry": 1,
+    "price": 3.29,
+    "deal": null
+  },
+  {
+    "id": "j1",
+    "name": "100% Orange Juice",
+    "img": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=300&q=80",
+    "stockStatus": "Medium",
+    "daysInPantry": 8,
+    "price": 4.29,
+    "deal": null
+  }
+]

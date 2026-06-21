@@ -14,16 +14,16 @@
   align-items: center;
 }
 
-/* 主要標籤：用於可以點擊過濾的分類 (如 Dairy, Meats) */
+/* primary tag */
 .custom-tag-primary {
-  background-color: #e5ecd3; /* 淺綠底色 */
+  background-color: #e5ecd3; 
   color: #111111;
   border: 2px solid #111111;
 }
 
-/* 次要標籤 (Ghost)：無黑框，用於展示型資訊 (如距離 10mi、Zip code) */
+/* secondary tag (Ghost)*/
 .custom-tag-ghost {
-  background-color: #e8e6e1; /* 淺灰底色 */
+  background-color: #e8e6e1; /* light gray background */
   color: #4a4a4a;
   border: 2px solid transparent;
 }

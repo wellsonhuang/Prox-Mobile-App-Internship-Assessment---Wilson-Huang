@@ -4,6 +4,9 @@ A mobile-first grocery search and deals experience prototype designed to help us
 
 ---
 
+## 🎬 Live Demo
+* **Video Demo:** [Google Drive Demo Video](https://drive.google.com/file/d/1vECZhPdk7viDpunIBOWZjNSI6EJK5rTp/view?usp=sharing)
+
 ## 🛠️ Build & Run Instructions
 
 This project can be run as a standard web application or compiled into a native Android app using Capacitor.
@@ -116,11 +119,16 @@ While this is a high-fidelity prototype, here is the roadmap for taking this app
 * **Styling:** Inline CSS / standard CSS - Selected to keep the prototype lightweight and maintain full control over the mobile-first visual hierarchy without relying on heavy external UI libraries.
 
 ### Component Structure
-The application is structured logically to separate concerns and ensure reusability:
-* `src/features/deals/ProductList.jsx`: The core screen displaying search functionality, categories, and deal cards.
-* `src/components/`: Contains reusable UI elements like `SkeletonCard` (loading state) and `EmptyState` (no results/errors).
-* `src/data/products.json`: Serves as the mock database representing API responses.
-* **Modals:** Separated logic for Location Picker, Filters, and the Savings Tracker to maintain a clean, maintainable main view.
+
+The application is structured logically to separate concerns and ensure maintainability:
+
+* `src/features/grocery/ProductList.jsx`: The primary screen responsible for displaying grocery deals, search functionality, product categories, and deal cards.
+* `src/components/`: Contains reusable UI components such as `SkeletonCard` (loading states), `EmptyState` (no results/errors), `BottomSheet`, `Button`, and `Tag`.
+* `src/data/products.json`: Serves as a mock database that simulates backend API responses during development and testing.
+* `src/features/pantry/`: Handles pantry-related functionality, including smart restock recommendations and inventory tracking concepts.
+* `src/pages/`: Contains higher-level application views and page-level components.
+* `src/store/store.js`: Manages shared application state and data flow across components.
+* **Bottom Sheets & Modals:** Filtering options, location selection, and other contextual actions are separated into dedicated components to keep the main shopping experience clean and maintainable.
 
 ### UX Decisions
 * **Mobile-First Layout:** Interactive elements (like the add-to-cart buttons) are sized at least 44x44px for easy thumb tapping.

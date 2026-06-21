@@ -15,8 +15,8 @@
   bottom: 0;
   left: 0;
   width: 100vw;
-  max-height: 85vh; /* 最高不超過螢幕的 85% */
-  background-color: #f4f1ea; /* App 背景色 */
+  max-height: 85vh; /* maximum height not exceeding 85% of the screen */
+  background-color: #f4f1ea; /* App background color */
   border-top: 3px solid #111111;
   border-radius: 24px 24px 0 0;
   z-index: 1000;

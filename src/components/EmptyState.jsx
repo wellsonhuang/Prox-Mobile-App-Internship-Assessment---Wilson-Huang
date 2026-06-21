@@ -6,7 +6,7 @@ export default function EmptyState({ icon, title, description, actionText, onAct
     <div style={{ 
       display: 'flex', flexDirection: 'column', alignItems: 'center', 
       justifyContent: 'center', textAlign: 'center', padding: '40px 20px',
-      gridColumn: '1 / -1' // 如果在 Grid 中，確保它佔滿整列
+      gridColumn: '1 / -1' 
     }}>
       <div style={{ 
         fontSize: '48px', marginBottom: '15px',

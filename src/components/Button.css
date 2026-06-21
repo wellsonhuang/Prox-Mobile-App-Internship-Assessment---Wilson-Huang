@@ -22,15 +22,15 @@
   transform: none;
 }
 
-/* 主要按鈕：深綠底、白字、粗黑框、黑陰影 */
+/* primary button */
 .custom-btn-primary {
-  background-color: #1a5336; /* 你的 App 綠色 */
+  background-color: #1a5336; 
   color: #ffffff;
   border: 2px solid #111111;
   box-shadow: 2px 2px 0px #111111;
 }
 
-/* 次要按鈕：白底、黑字、粗黑框、黑陰影 */
+/* secondary button */
 .custom-btn-secondary {
   background-color: #ffffff;
   color: #111111;
@@ -38,7 +38,7 @@
   box-shadow: 2px 2px 0px #111111;
 }
 
-/* 幽靈按鈕：無邊框，純文字或極簡背景 (用於減少視覺干擾) */
+/* ghost button: no border, text only or minimal background (used to reduce visual distraction) */
 .custom-btn-ghost {
   background-color: transparent;
   color: #111111;

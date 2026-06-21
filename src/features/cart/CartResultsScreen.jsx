@@ -1,4 +1,3 @@
-// src/features/cart/CartResultsScreen.jsx
 import React, { useState } from 'react';
 import Button from '../../components/Button';
 import EmptyState from '../../components/EmptyState'; 
@@ -68,14 +67,21 @@ export default function CartResultsScreen({ cartItems, totalPrice, onBrowseDeals
           <span style={{ fontSize: '24px', fontWeight: '900', color: '#1A472A' }}>${selectedStore.total.toFixed(2)}</span>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px' }}>
+        {/* flex for slide left and right*/}
+        <div style={{ display: 'flex', overflowX: 'auto', gap: '12px', paddingBottom: '10px' }}>
           {cartItems.map((item, idx) => {
             const storeSpecificPrice = item.price * selectedStore.multiplier;
 
             return (
-              <div key={idx} style={{ backgroundColor: '#F8F7F2', borderRadius: '16px', padding: '12px', border: '2px solid #111' }}>
+              <div key={idx} style={{ 
+                backgroundColor: '#F8F7F2', 
+                borderRadius: '16px', 
+                padding: '12px', 
+                border: '2px solid #111',
+                minWidth: '140px', 
+                flexShrink: 0   
+              }}>
                 
-                {/* 🌟 4. 修改：將 {item.img} 換成真正的圖片標籤 */}
                 <div style={{ height: '75px', backgroundColor: '#FFF', borderRadius: '10px', marginBottom: '8px', border: '2px solid #111', overflow: 'hidden' }}>
                   <img src={item.img} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>

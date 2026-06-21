@@ -1,7 +1,7 @@
 // src/features/deals/TopStaples.jsx
 import React from 'react';
 
-// 資料結構：加入兩家店的價格與趨勢 ('up', 'down', 'same')，以及誰是贏家 (winner)
+// price and trend ('up', 'down', 'same')
 const staplesData = [
   { id: 1, name: "Chicken Breast", wPrice: 4.99, wTrend: 'up', tPrice: 3.59, tTrend: 'down', winner: 'T' },
   { id: 2, name: "Ground Beef", wPrice: 6.44, wTrend: 'same', tPrice: 5.39, tTrend: 'down', winner: 'T' },
@@ -14,14 +14,14 @@ export default function TopStaples() {
   const renderPrice = (price, trend, isWinner) => {
     let arrow = '';
     let arrowColor = '';
-    if (trend === 'down') { arrow = '▼'; arrowColor = '#1A472A'; } // 跌價/便宜 (綠)
-    else if (trend === 'up') { arrow = '▲'; arrowColor = '#FF5252'; } // 漲價/變貴 (紅)
+    if (trend === 'down') { arrow = '▼'; arrowColor = '#1A472A'; } // down/cheaper (green)
+    else if (trend === 'up') { arrow = '▲'; arrowColor = '#FF5252'; } // up/more expensive (red)
     else { arrow = '–'; arrowColor = '#999'; }
 
     return (
       <div style={{
         display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px',
-        backgroundColor: isWinner ? '#D1E8D5' : 'transparent', // 贏家顯示淺綠底
+        backgroundColor: isWinner ? '#D1E8D5' : 'transparent', 
         padding: '6px 10px', borderRadius: '8px',
         fontWeight: isWinner ? '900' : '500',
         color: isWinner ? '#1A472A' : '#555'

@@ -3,7 +3,7 @@ import './Tag.css';
 
 const Tag = ({ 
   children, 
-  variant = 'primary', // 'primary' (有黑框) | 'ghost' (無黑框，純色底)
+  variant = 'primary', // 'primary' | 'ghost' 
   icon,
   className = '' 
 }) => {

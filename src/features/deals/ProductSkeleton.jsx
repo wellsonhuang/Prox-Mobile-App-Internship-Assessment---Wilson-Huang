@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProductList.css'; // 引入動畫 CSS
+import './ProductList.css'; 
 
 const ProductSkeleton = () => {
     return (
@@ -15,7 +15,7 @@ const ProductSkeleton = () => {
             border: '2px solid #111',
             boxShadow: '3px 3px 0px #111',
         }}>
-            {/* 圖片佔位符 */}
+            
             <div className="skeleton-pulse" style={{ 
                 width: '100%', 
                 paddingTop: '100%', 
@@ -24,7 +24,7 @@ const ProductSkeleton = () => {
                 marginBottom: '15px'
             }}></div>
             
-            {/* 文字佔位符 */}
+        
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', flex: 1 }}>
                 <div className="skeleton-pulse" style={{ width: '90%', height: '14px', borderRadius: '4px', backgroundColor: '#E8E5DC' }}></div>
                 <div className="skeleton-pulse" style={{ width: '60%', height: '14px', borderRadius: '4px', backgroundColor: '#E8E5DC' }}></div>

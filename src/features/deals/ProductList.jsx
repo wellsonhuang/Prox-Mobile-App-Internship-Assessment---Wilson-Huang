@@ -15,7 +15,7 @@ export default function ProductList({ cart, onUpdateQuantity }) {
   const [showFilterModal, setShowFilterModal] = useState(false);
   const [showSavingsModal, setShowSavingsModal] = useState(false); 
   
-  const [zipCode, setZipCode] = useState('77'); 
+  const [zipCode, setZipCode] = useState('77840'); 
   const [radius, setRadius] = useState(12); 
 
   const [tempZipCode, setTempZipCode] = useState(zipCode);
@@ -35,7 +35,6 @@ export default function ProductList({ cart, onUpdateQuantity }) {
 
   useEffect(() => { fetchProducts(); }, [activeCategory, selectedStores, selectedDietary]); 
 
-  // 🌟 過濾邏輯升級：加入 p.dietary?.includes 保護機制
   const filteredProducts = mockProducts.filter(p => {
     const matchCategory = activeCategory === 'All' || p.category === activeCategory;
     const matchSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase());

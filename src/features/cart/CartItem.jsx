@@ -57,7 +57,6 @@ const CartItem = ({ onContinueShopping }) => {
   return (
     <div className="cart-mobile-container">
       <div className="cart-header">
-        {/* 使用次要按鈕樣式替換原本寫死的 back-button */}
         <Button 
           variant="secondary" 
           onClick={(e) => handleContinueShopping(e)}
@@ -71,7 +70,6 @@ const CartItem = ({ onContinueShopping }) => {
 
       <div className="cart-items-wrapper">
         {cart.length === 0 ? (
-          /* ✨ 使用新建立的共用 EmptyState 元件 */
           <EmptyState 
             icon="🛒"
             title="Your Build-a-Cart is empty"
@@ -180,7 +178,7 @@ const CartItem = ({ onContinueShopping }) => {
             </div>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-              {/* ✨ 使用共用 Button 元件 */}
+              {/*  Button component */}
               <Button 
                 variant="secondary" 
                 style={{ width: '100%', padding: '12px' }}

@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// 從 LocalStorage 嘗試載入歷史購物車資料
+// download history data fromLocalStorage 
 const loadCartFromStorage = () => {
   try {
     const savedCart = localStorage.getItem('prox_cart');
@@ -13,7 +13,7 @@ const loadCartFromStorage = () => {
 export const CartSlice = createSlice({
   name: 'cart',
   initialState: {
-    items: loadCartFromStorage(), // 初始化時讀取 LocalStorage
+    items: loadCartFromStorage(), 
   },
   reducers: {
     addItem: (state, action) => {
@@ -40,7 +40,6 @@ export const CartSlice = createSlice({
       localStorage.setItem('prox_cart', JSON.stringify(state.items));
     },
     clearCart: (state) => {
-      // 結帳後清空購物車專用
       state.items = [];
       localStorage.setItem('prox_cart', JSON.stringify([]));
     }

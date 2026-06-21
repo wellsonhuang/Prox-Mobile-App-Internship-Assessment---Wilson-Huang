@@ -1,23 +1,20 @@
 import React, { useState } from 'react';
 import Button from '../../components/Button';
-// 引入你的其他共用元件...
 
 const mockStoreResults = [
   { id: 'aldi', name: 'aldi', rank: 1, total: 9.46, itemsCount: 10, isBest: true },
   { id: 'walmart', name: 'Walmart', rank: 2, total: 9.74, itemsCount: 10, isBest: false },
-  // ... 其他商店
 ];
 
 export default function GroceryList({ cartItems }) {
-  // 控制哪一家店的明細被展開（預設展開第一名的 aldi）
   const [expandedStore, setExpandedStore] = useState('aldi');
 
-  // Requirement: Empty State 處理
+  // Requirement: Empty State 
   if (!cartItems || cartItems.length === 0) {
     return (
       <div className="empty-cart-state">
          <h2>Your List is Empty</h2>
-         <Button onClick={/* 回到 Deals 頁面 */}>Browse Deals</Button>
+         <Button onClick={/* back to Deals */}>Browse Deals</Button>
       </div>
     );
   }
@@ -27,14 +24,14 @@ export default function GroceryList({ cartItems }) {
       <h1 style={{ fontSize: '32px', fontWeight: '900' }}>Grocery List</h1>
       <p style={{ color: '#666', fontWeight: 'bold' }}>Find the cheapest single-store price...</p>
 
-      {/* 🗺️ 地圖區塊 (Mock) */}
+      {/* map */}
       <div style={{ height: '250px', backgroundImage: 'url(MAP_IMAGE_URL)', borderRadius: '20px', border: '2px solid #111', position: 'relative', margin: '20px 0' }}>
-         {/* 在這裡放置絕對定位的價格 Tag */}
+         {/* price Tag */}
       </div>
 
       <h2 style={{ fontSize: '22px', borderLeft: '4px solid #1A472A', paddingLeft: '10px' }}>Best Single-Store Carts</h2>
 
-      {/* 🏪 商店清單 (Accordions) */}
+      {/* Accordions */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', marginTop: '15px' }}>
         {mockStoreResults.map((store) => {
           const isExpanded = expandedStore === store.id;
@@ -53,7 +50,6 @@ export default function GroceryList({ cartItems }) {
                 transition: 'all 0.2s'
               }}
             >
-              {/* 商店標頭資訊 (Logo, 名稱, 總價) */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
                   <span style={{ backgroundColor: '#E8E5DC', color: '#111', borderRadius: '50%', width: '24px', height: '24px', display: 'flex', justifyContent: 'center', alignItems: 'center', fontWeight: 'bold', fontSize: '12px' }}>{store.rank}</span>
@@ -63,11 +59,10 @@ export default function GroceryList({ cartItems }) {
                 <h3 style={{ margin: 0 }}>${store.total} {isExpanded ? '▲' : '▼'}</h3>
               </div>
 
-              {/* 🍎 展開後的商品明細 (雙欄 Grid) */}
               {isExpanded && (
                 <div style={{ 
                   display: 'grid', 
-                  gridTemplateColumns: 'repeat(2, 1fr)', // ✨ 關鍵：分成兩欄
+                  gridTemplateColumns: 'repeat(2, 1fr)', 
                   gap: '15px', 
                   marginTop: '20px' 
                 }}>
@@ -81,7 +76,7 @@ export default function GroceryList({ cartItems }) {
                 </div>
               )}
 
-              {/* Save Cart 按鈕 */}
+              {/* Save Cart button */}
               {isExpanded && (
                  <Button style={{ width: '100%', marginTop: '20px', backgroundColor: '#FFF', color: '#1A472A' }}>
                     🛒 Save Cart

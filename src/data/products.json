@@ -1,17 +1,152 @@
 [
-  { "id": "b1", "name": "Bananas, Sold by the Each", "price": 0.22, "subtext": "Walmart, Target", "img": "https://images.unsplash.com/photo-1528825871115-3581a5387919?w=300&q=80", "category": "Produce", "stores": ["Walmart", "Target"], "dietary": ["Vegan", "Gluten Free"] },
-  { "id": "p1", "name": "Organic Pinto Beans", "price": 1.25, "subtext": "HEB, ALDI", "img": "https://images.unsplash.com/photo-1551326844-4df70f78d0e9?w=300&q=80", "category": "Pantry", "stores": ["HEB", "ALDI"], "dietary": ["Organic Only", "Vegan", "Gluten Free"] },
-  { "id": "br1", "name": "Broccoli Crown", "price": 0.60, "subtext": "ALDI, Walmart", "img": "https://images.unsplash.com/photo-1583663848850-46af132dc08e?w=300&q=80", "category": "Produce", "stores": ["ALDI", "Walmart"], "dietary": ["Vegan", "Gluten Free"] },
-  { "id": "y1", "name": "Yoplait Original Orange Yogurt", "price": 0.77, "subtext": "6 oz • Walmart", "img": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=300&q=80", "category": "Dairy", "stores": ["Walmart"], "dietary": ["Gluten Free"] },
-  { "id": "m1", "name": "Boneless Skinless Chicken Breast", "price": 4.99, "subtext": "1 lb • ALDI", "img": "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=300&q=80", "category": "Meat", "stores": ["ALDI", "HEB"], "dietary": ["Gluten Free"] },
-  { "id": "tf1", "name": "Organic Extra Firm Tofu", "price": 2.49, "subtext": "Target, HEB", "img": "https://images.unsplash.com/photo-1588636737525-4fc17300407a?w=300&q=80", "category": "Dairy", "stores": ["Target", "HEB"], "dietary": ["Organic Only", "Vegan", "Gluten Free"] },
-  { "id": "bd1", "name": "100% Whole Wheat Bread", "price": 3.15, "subtext": "Walmart, ALDI", "img": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=300&q=80", "category": "Pantry", "stores": ["Walmart", "ALDI"], "dietary": ["Vegan"] },
-  { "id": "bf1", "name": "Grass-Fed Ground Beef", "price": 6.50, "subtext": "1 lb • HEB", "img": "https://images.unsplash.com/photo-1588168333986-5078d3ae3976?w=300&q=80", "category": "Meat", "stores": ["HEB", "Walmart"], "dietary": ["Gluten Free"] },
-  { "id": "am1", "name": "Unsweetened Almond Milk", "price": 2.99, "subtext": "Target, ALDI", "img": "https://images.unsplash.com/photo-1563636619-e9143da7973b?w=300&q=80", "category": "Dairy", "stores": ["Target", "ALDI"], "dietary": ["Vegan", "Gluten Free"] },
-  { "id": "eg1", "name": "Large Grade A Eggs", "price": 2.15, "subtext": "1 Dozen • Walmart", "img": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=300&q=80", "category": "Dairy", "stores": ["Walmart", "HEB"], "dietary": ["Gluten Free"] },
-  { "id": "ap1", "name": "Honeycrisp Apples", "price": 1.49, "subtext": "$1.49 / lb • Target", "img": "https://images.unsplash.com/photo-1560806887-1e4cd0b6faa6?w=300&q=80", "category": "Produce", "stores": ["Target", "ALDI"], "dietary": ["Vegan", "Gluten Free", "Organic Only"] },
-  { "id": "pa1", "name": "Organic Penne Pasta", "price": 1.89, "subtext": "16 oz • HEB", "img": "https://images.unsplash.com/photo-1551462147-ff29053bfc14?w=300&q=80", "category": "Pantry", "stores": ["HEB", "Target"], "dietary": ["Vegan", "Organic Only"] },
-  { "id": "sp1", "name": "Fresh Baby Spinach", "price": 2.99, "subtext": "8 oz • ALDI", "img": "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=300&q=80", "category": "Produce", "stores": ["ALDI", "Walmart"], "dietary": ["Vegan", "Gluten Free", "Organic Only"] },
-  { "id": "pb1", "name": "Creamy Peanut Butter", "price": 3.49, "subtext": "16 oz • Target", "img": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=300&q=80", "category": "Pantry", "stores": ["Target", "Walmart"], "dietary": ["Vegan", "Gluten Free"] },
-  { "id": "sa1", "name": "Wild Caught Salmon Fillet", "price": 9.99, "subtext": "1 lb • HEB", "img": "https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=300&q=80", "category": "Meat", "stores": ["HEB"], "dietary": ["Gluten Free"] }
+  {
+    "id": "b1",
+    "name": "Bananas, Sold by the Each",
+    "price": 0.22,
+    "subtext": "Walmart, Target",
+    "img": "https://images.unsplash.com/photo-1528825871115-3581a5387919?w=300&q=80",
+    "category": "Produce",
+    "stores": ["Walmart", "Target"],
+    "dietary": ["Vegan", "Gluten Free"]
+  },
+  {
+    "id": "av1",
+    "name": "Fresh Hass Avocados",
+    "price": 0.99,
+    "subtext": "Each • HEB, ALDI",
+    "img": "https://images.unsplash.com/photo-1519996529931-28324d5a630e?w=300&q=80",
+    "category": "Produce",
+    "stores": ["HEB", "ALDI"],
+    "dietary": ["Vegan", "Gluten Free", "Organic Only"]
+  },
+  {
+    "id": "br1",
+    "name": "Broccoli Crown",
+    "price": 0.60,
+    "subtext": "ALDI, Walmart",
+    "img": "https://images.unsplash.com/photo-1583663848850-46af132dc08e?w=300&q=80",
+    "category": "Produce",
+    "stores": ["ALDI", "Walmart"],
+    "dietary": ["Vegan", "Gluten Free"]
+  },
+  {
+    "id": "y1",
+    "name": "Yoplait Original Orange Yogurt",
+    "price": 0.77,
+    "subtext": "6 oz • Walmart",
+    "img": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=300&q=80",
+    "category": "Dairy",
+    "stores": ["Walmart"],
+    "dietary": ["Gluten Free"]
+  },
+  {
+    "id": "m1",
+    "name": "Boneless Skinless Chicken Breast",
+    "price": 4.99,
+    "subtext": "1 lb • ALDI",
+    "img": "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=300&q=80",
+    "category": "Meat",
+    "stores": ["ALDI", "HEB"],
+    "dietary": ["Gluten Free"]
+  },
+  {
+    "id": "tf1",
+    "name": "Organic Extra Firm Tofu",
+    "price": 2.49,
+    "subtext": "Target, HEB",
+    "img": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300&q=80",
+    "category": "Dairy",
+    "stores": ["Target", "HEB"],
+    "dietary": ["Organic Only", "Vegan", "Gluten Free"]
+  },
+  {
+    "id": "bd1",
+    "name": "100% Whole Wheat Bread",
+    "price": 3.15,
+    "subtext": "Walmart, ALDI",
+    "img": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=300&q=80",
+    "category": "Pantry",
+    "stores": ["Walmart", "ALDI"],
+    "dietary": ["Vegan"]
+  },
+  {
+    "id": "bf1",
+    "name": "Grass-Fed Ground Beef",
+    "price": 6.50,
+    "subtext": "1 lb • HEB",
+    "img": "https://images.unsplash.com/photo-1588168333986-5078d3ae3976?w=300&q=80",
+    "category": "Meat",
+    "stores": ["HEB", "Walmart"],
+    "dietary": ["Gluten Free"]
+  },
+  {
+    "id": "am1",
+    "name": "Unsweetened Almond Milk",
+    "price": 2.99,
+    "subtext": "Target, ALDI",
+    "img": "https://images.unsplash.com/photo-1563636619-e9143da7973b?w=300&q=80",
+    "category": "Dairy",
+    "stores": ["Target", "ALDI"],
+    "dietary": ["Vegan", "Gluten Free"]
+  },
+  {
+    "id": "eg1",
+    "name": "Large Grade A Eggs",
+    "price": 2.15,
+    "subtext": "1 Dozen • Walmart",
+    "img": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=300&q=80",
+    "category": "Dairy",
+    "stores": ["Walmart", "HEB"],
+    "dietary": ["Gluten Free"]
+  },
+  {
+    "id": "ap1",
+    "name": "Honeycrisp Apples",
+    "price": 1.49,
+    "subtext": "$1.49 / lb • Target",
+    "img": "https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?w=300&q=80",
+    "category": "Produce",
+    "stores": ["Target", "ALDI"],
+    "dietary": ["Vegan", "Gluten Free", "Organic Only"]
+  },
+  {
+    "id": "pa1",
+    "name": "Organic Penne Pasta",
+    "price": 1.89,
+    "subtext": "16 oz • HEB",
+    "img": "https://images.unsplash.com/photo-1551462147-ff29053bfc14?w=300&q=80",
+    "category": "Pantry",
+    "stores": ["HEB", "Target"],
+    "dietary": ["Vegan", "Organic Only"]
+  },
+  {
+    "id": "sp1",
+    "name": "Fresh Baby Spinach",
+    "price": 2.99,
+    "subtext": "8 oz • ALDI",
+    "img": "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=300&q=80",
+    "category": "Produce",
+    "stores": ["ALDI", "Walmart"],
+    "dietary": ["Vegan", "Gluten Free", "Organic Only"]
+  },
+  {
+    "id": "st1",
+    "name": "Fresh Strawberries",
+    "price": 3.99,
+    "subtext": "16 oz • Target, Walmart",
+    "img": "https://images.unsplash.com/photo-1518635017498-87f514b751ba?w=300&q=80",
+    "category": "Produce",
+    "stores": ["Target", "Walmart"],
+    "dietary": ["Vegan", "Gluten Free", "Organic Only"]
+  },
+  {
+    "id": "sa1",
+    "name": "Wild Caught Salmon Fillet",
+    "price": 9.99,
+    "subtext": "1 lb • HEB",
+    "img": "https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?w=300&q=80",
+    "category": "Meat",
+    "stores": ["HEB"],
+    "dietary": ["Gluten Free"]
+  }
 ]

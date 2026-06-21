@@ -2,7 +2,7 @@
 import React from 'react';
 import Button from '../../components/Button';
 
-// 模擬購物車資料 (未來從 Redux 抓取)
+// mock cart data(future work: Redux )
 const mockCartItems = [
   { id: 1, name: 'Chicken Breast' },
   { id: 2, name: 'Bread' },
@@ -25,7 +25,6 @@ export default function MyCartScreen({ onOptimize }) {
         Review your list before finding the best deals.
       </p>
 
-      {/* 購物車商品列表 (仿照 IMG_1343) */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '30px' }}>
         {mockCartItems.map((item) => (
           <div key={item.id} style={{ 
@@ -42,7 +41,6 @@ export default function MyCartScreen({ onOptimize }) {
         ))}
       </div>
 
-      {/* ✨ 關鍵的行動呼籲按鈕 */}
       <Button 
         onClick={onOptimize}
         style={{ width: '100%', padding: '20px', fontSize: '20px', backgroundColor: '#1A472A', color: '#FFF', boxShadow: '4px 4px 0px #111' }}

@@ -40,7 +40,7 @@ export default function CartDrawer({ isOpen, onClose, cartItems, totalPrice, onU
                 <div key={item.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#FFF', padding: '12px 16px', borderRadius: '16px', border: '2px solid #111', boxShadow: '2px 2px 0px #111' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                     
-                    {/* 🌟 4. 修改：將 {item.img} 換成 <img /> 標籤 */}
+              
                     <div style={{ width: '55px', height: '55px', borderRadius: '10px', border: '2px solid #111', overflow: 'hidden', flexShrink: 0, backgroundColor: '#F0EFEA' }}>
                       <img src={item.img} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>

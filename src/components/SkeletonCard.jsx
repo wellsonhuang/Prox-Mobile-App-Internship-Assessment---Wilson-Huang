@@ -19,7 +19,7 @@ export default function SkeletonCard() {
         <div style={{ width: '36px', height: '36px', backgroundColor: '#E8E5DC', borderRadius: '50%' }}></div>
       </div>
       
-      {/* 可以在 index.css 中加入這個動畫，或者直接寫 inline style 也可以運作 */}
+    
       <style>{`
         @keyframes pulse {
           0% { opacity: 1; }
