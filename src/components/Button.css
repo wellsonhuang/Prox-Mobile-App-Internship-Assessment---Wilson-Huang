@@ -1,0 +1,49 @@
+.custom-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.custom-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: none !important;
+}
+
+.custom-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 主要按鈕：深綠底、白字、粗黑框、黑陰影 */
+.custom-btn-primary {
+  background-color: #1a5336; /* 你的 App 綠色 */
+  color: #ffffff;
+  border: 2px solid #111111;
+  box-shadow: 2px 2px 0px #111111;
+}
+
+/* 次要按鈕：白底、黑字、粗黑框、黑陰影 */
+.custom-btn-secondary {
+  background-color: #ffffff;
+  color: #111111;
+  border: 2px solid #111111;
+  box-shadow: 2px 2px 0px #111111;
+}
+
+/* 幽靈按鈕：無邊框，純文字或極簡背景 (用於減少視覺干擾) */
+.custom-btn-ghost {
+  background-color: transparent;
+  color: #111111;
+  border: 2px solid transparent;
+}
+.custom-btn-ghost:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}

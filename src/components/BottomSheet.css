@@ -1,0 +1,70 @@
+
+.bottom-sheet-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.bottom-sheet-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  max-height: 85vh; /* 最高不超過螢幕的 85% */
+  background-color: #f4f1ea; /* App 背景色 */
+  border-top: 3px solid #111111;
+  border-radius: 24px 24px 0 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0px -4px 10px rgba(0,0,0,0.1);
+}
+
+.bottom-sheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 2px solid #111111;
+  background-color: #ffffff;
+  border-radius: 24px 24px 0 0;
+}
+
+.bottom-sheet-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.bottom-sheet-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #111111;
+  padding: 4px;
+}
+
+.bottom-sheet-content {
+  padding: 16px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* 動畫效果 */
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

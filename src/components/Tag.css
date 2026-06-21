@@ -1,0 +1,29 @@
+.custom-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 16px;
+  white-space: nowrap;
+}
+
+.custom-tag-icon {
+  margin-right: 4px;
+  display: flex;
+  align-items: center;
+}
+
+/* 主要標籤：用於可以點擊過濾的分類 (如 Dairy, Meats) */
+.custom-tag-primary {
+  background-color: #e5ecd3; /* 淺綠底色 */
+  color: #111111;
+  border: 2px solid #111111;
+}
+
+/* 次要標籤 (Ghost)：無黑框，用於展示型資訊 (如距離 10mi、Zip code) */
+.custom-tag-ghost {
+  background-color: #e8e6e1; /* 淺灰底色 */
+  color: #4a4a4a;
+  border: 2px solid transparent;
+}

@@ -1,0 +1,29 @@
+.about-us-container {
+  width: 100%; /* 這是修復手機版型的關鍵，絕對不能寫死 px */
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.about-us-heading {
+  font-size: 24px; /* 縮小以適應手機 */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about-us-description {
+  font-size: 16px; /* 縮小以適應手機 */
+  color: #666;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* 修改 AboutUs.css 裡的這段 */
+.about-us-content {
+  font-size: 15px; 
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #444;
+  text-align: left; /* 從 justify 改成 left 或 center，這樣文字排版才會自然 */
+}

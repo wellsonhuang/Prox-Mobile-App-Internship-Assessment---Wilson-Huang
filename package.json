@@ -12,6 +12,9 @@
     "preview": "vite build; vite preview --host"
   },
   "dependencies": {
+    "@capacitor/android": "^8.4.1",
+    "@capacitor/cli": "^7.6.7",
+    "@capacitor/core": "^8.4.1",
     "@reduxjs/toolkit": "^2.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
