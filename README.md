@@ -117,7 +117,7 @@ The roadmap for taking this application into production:
 
 ---
 
-## 📂 Documentation
+## Documentation
 
 ### Tech Stack Choice
 
